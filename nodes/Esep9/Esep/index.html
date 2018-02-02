@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Esep 9</title>
+  <link rel="stylesheet" href="../../../css/tasks/materialize.min.css">
+  <link rel="stylesheet" href="../../../css/tasks/style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="contentWrapper">
+        <div class="esepTitle">
+          Өнiмдiлiгi 2т/сағ Na<sub>2</sub>SO<sub>4</sub> тұз-сульфат өндiрiсiнiң материалдық балансын құрастырыңыздар.
+        </div>
+        <div class="content">
+          <div class="blockTitle">Берілгені:</div>
+          <p>
+            Табиғи метанды оттегімен конверсиялауда (CH<sub>4</sub> + O<sub>2</sub> &#8594; CO<sub>2</sub> + 2H<sub>2</sub> ) қолданылатын бастапқы қоспада <span class="nao">10</span> кмоль CH<sub>4</sub> және артық мөлшерде O<sub>2</sub> бар. Соңғы қоспадағы
+            H
+            <sub>2</sub>–ң мөлшері <span class="nr">12</span> кмоль. Тепе-теңдік қоспадағы CH<sub>4</sub>–ң мөлшері <span class="na">2.5</span> кмоль.
+             Өндiрiсте құрамында 95% NaCl бар ас тұзы және 92,5% Н2SO4 купорос майы қолданылады. NaCl-ң ыдырау дәрежесi
+            92%, Н2SO4–ң өндiрiстiк шығыны 1%. Өндiрiсте құрамында 95% NaCl бар ас тұзы және 92.5% Н<sub>2</sub>SO<sub>4</sub> купорос майы қолданылады.
+            NaCl-ң ыдырау дәрежесi 92%,  Н<sub>2</sub>SO<sub>4</sub>–ң өндiрiстiк шығыны 1%.
+
+
+          </p>
+          <p class="primechanie">*Ответ округляется до сотых (Өрнек: 2.94)</p>
+          <form action="" class="userForms col s6" id="userForms">
+            <div class="input-field active user_input_field">
+              <img src="assets/img/formula1.png" alt="">
+              <div class="input-field">
+
+                <input id="userInput1" name="userInput1" type="text" class="validate">
+                <label for="userInput1">Метанның конверсиялану дәрежесі: (%)</label>
+              </div>
+            </div>
+            <div class="input-field user_input_field">
+              <img src="assets/img/formula2.png" alt="">
+              <div class="input-field">
+
+                <input id="userInput2" name="userInput2" type="text" class="validate">
+                <label for="userInput2">Өнімнің шығымы: (%)</label>
+              </div>
+            </div>
+
+            <div class="input-field actionButtons clearB">
+              <button class="waves-effect deep-orange darken-1 btn" type="button" id="generateRandom">Генерировать</button>
+              <button class="waves-effect waves-light btn right green darken-1" type="submit">Тексеру</button>
+            </div>
+            <div class="input-field actionButtons clearB">
+              <button class="waves-effect waves-light btn yellow darken-2 left" type="button" id="show_solution">Шығарылуы</button>
+            </div>
+          </form>
+        </div>
+        <div class="answers clearB" id="solution">
+          <div class="content">
+            <div class="blockTitle">
+              Шығарылуы:
+            </div>
+            <div class="steps">
+              <p>
+                <span class="solutionText">
+                                        X<sub>CH4</sub> = (<span class="nao">10</span> - <span class="na">2.5</span>) / <span class="nao">10</span> * 100% = <span class="xch4">75</span> %
+                </span>
+              </p>
+              <p>
+                <span class="solutionText">
+                                        G<sub>теор</sub> = (<span class="nao">10</span> - <span class="na">2.5</span>) * 2 = <span class="g">15</span> кмоль
+                </span>
+              </p>
+              <p>
+                <span class="solutionText">
+                                        Ш = <span class="nr">12</span>/<span class="g">15</span> * 100% = <span class="sh">80</span> %
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="../../../js/tasks/jquery-3.3.1.min.js"></script>
+  <script src="../../../js/tasks/materialize.min.js"></script>
+  <script src="assets/js/custom.js"></script>
+</body>
+
+</html>
