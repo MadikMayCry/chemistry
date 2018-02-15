@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Esep 9</title>
+    <title>Esep 10</title>
     <link rel="stylesheet" href="../../../css/tasks/materialize.min.css">
     <link rel="stylesheet" href="../../../css/tasks/style.css">
 </head>
@@ -13,14 +13,16 @@
         <div class="row">
             <div class="contentWrapper">
                 <div class="esepTitle">
-                    Өнiмдiлiгi 2т/сағ Na<sub>2</sub>SO<sub>4</sub> тұз-сульфат өндiрiсiнiң материалдық балансын құрастырыңыздар.
+                    Бастапқы қоспада <span class="m1">1</span> моль СО-ға <span class="m2">2</span> моль Н<sub>2</sub>О болғандағы газдың тепе-теңдік құрамын анықтаңыздар.
                 </div>
                 <div class="content">
                     <div class="blockTitle">Берілгені:</div>
                     <p>
-                        Өндiрiсте құрамында <span class="naclperc1">95</span>% NaCl бар ас тұзы және <span class="h2so4perc1">92.5</span>% Н<sub>2</sub>SO<sub>4</sub> купорос майы қолданылады. NaCl-ң ыдырау дәрежесi <span class="naclperc2">92</span>%,
-                        Н<sub>2</sub>SO<sub>4</sub>–ң өндiрiстiк шығыны <span class="h2so4perc1">1</span>%.
-
+                        СО + Н<sub>2</sub>О СО<sub>2</sub>+Н<sub>2</sub> реакциясы бойынша көміртек оксидінің (II) су буымен конверсиясы кезінде тепе-теңдік тұрақтысының мағынасы КС = (CO<sub>2</sub>)/([C0][H<sub>2</sub>O]) = <span class="kc">1</span>-ге
+                        тең.
+                    </p>
+                    <p>
+                        Бастапқы қоспада <span class="m1">1</span> моль СО-ға <span class="m2">2</span> моль Н<sub>2</sub>О болғандағы газдың тепе-теңдік құрамын анықтаңыздар.
                     </p>
                     <p>Есептеулердi химиялық реакцияның стехиометриялық теңдеуi бойынша жүргiземiз:</p>
                     <img src="assets/img/formula1.png" alt="">
@@ -37,52 +39,7 @@
                                 <label for="userInput2">Н<sub>2</sub>SO<sub>4</sub>-ң реакция шығыны: (кг/сағ Н<sub>2</sub>SO<sub>4</sub>)</label>
                             </div>
                         </div>
-                        <div class="input-field user_input_field">
-                            <p>
-                                Тәжiрибелiк шығын коэффициенттерiн есептеймiз
-                            </p>
-                            <div class="input-field">
-                                <input id="userInput3" name="userInput3" type="text" class="validate">
-                                <label for="userInput3">Айналдыру NaCl-ң шығыны: (кг/сағ NaCl)</label>
-                            </div>
-                            <div class="input-field">
-                                <input id="userInput4" name="userInput4" type="text" class="validate">
-                                <label for="userInput4">NaCl-ң реакцияға түспеген мөлшерi: (кг/сағ)</label>
-                            </div>
-                            <div class="input-field">
-                                <input id="userInput5" name="userInput5" type="text" class="validate">
-                                <label for="userInput5"><span class="naclperc1">95</span>% NaCl бар ас тұзының шығыны: (кг/сағ)</label>
-                            </div>
-                            <div class="input-field">
-                                <input id="userInput6" name="userInput6" type="text" class="validate">
-                                <label for="userInput6">Ас тұзындағы қоспалардың мөлшерi: (кг/сағ)</label>
-                            </div>
-                            <div class="input-field">
-                                <input id="userInput7" name="userInput7" type="text" class="validate">
-                                <label for="userInput7">Н<sub>2</sub>SO<sub>4</sub>-ң өндiрiстiк шығыны: (кг/сағ)</label>
-                            </div>
-                            <div class="input-field">
-                                <input id="userInput8" name="userInput8" type="text" class="validate">
-                                <label for="userInput8">Н<sub>2</sub>SO<sub>4</sub>-ң  жалпы шығыны: (кг/сағ)</label>
-                            </div>
-                            <div class="input-field">
-                                <input id="userInput9" name="userInput9" type="text" class="validate">
-                                <label for="userInput9">Купорос майының шығыны: (кг/сағ)</label>
-                            </div>
-                            <div class="input-field">
-                                <input id="userInput10" name="userInput10" type="text" class="validate">
-                                <label for="userInput10">Купорос майындағы судың мөлшерi: (кг/сағ)</label>
-                            </div>
-                        </div>
-                        <div class="input-field user_input_field">
-                            <p>
-                                Реакция бойынша пайда болған хлорсутектiң мөлшерi
-                            </p>
-                            <div class="input-field">
-                                <input id="userInput11" name="userInput11" type="text" class="validate">
-                                <label for="userInput11">Пайда болған хлорсутектiң мөлшерi: (кг/сағ)</label>
-                            </div>
-                        </div>
+
 
                         <div class="input-field actionButtons clearB">
                             <button class="waves-effect deep-orange darken-1 btn" type="button" id="generateRandom">Генерировать</button>
@@ -100,82 +57,16 @@
                         </div>
                         <div class="steps">
                             <p>
-                                I) Шикiзаттар бойынша теориялық шығын коэффициенттерiн есептеймiз. Есептеулердi химиялық реакцияның стехиометриялық теңдеуi бойынша жүргiземiз:
+                                Конверторленген газдағы СО<sub>2</sub>-ні тепе-теңдік айналдыру дәрежесін Х<sub>T</sub>-арқылы белгілейміз.
                             </p>
                             <p>
-                                NaCl-ң реакция бойынша шығыны:
+                                Тепе-теңдік жағдайдағы компоненттердің молдік үлестері:
                             </p>
                             <p>
-                                X<sub>1</sub> = <span class="x1">1647.89</span> кг/сағ NaCl
+                                СО - <span class="m1">1</span> - Х<sub>T</sub>; Н<sub>2</sub>О - <span class="m2">2</span> - Х<sub>T</sub>; СО<sub>2</sub> - Х<sub>T</sub>; Н<sub>2</sub> - Х<sub>T</sub>. Осыларды тепе-теңдік тұрақтысының теңдеуіне қоямыз, яғни
                             </p>
                             <p>
-                                Н<sub>2</sub>SO<sub>4</sub>-ң реакция бойынша шығыны:
-                            </p>
-                            <p>
-                                Х<sub>2</sub> = <span class="x2">1380.28</span> кг/сағ Н<sub>2</sub>SO<sub>4</sub>
-                            </p>
-                        </div>
-                        <br>
-                        <div class="steps">
-                            <p>
-                                II) Тәжiрибелiк шығын коэффициенттерiн есептеймiз.
-                            </p>
-                            <p>
-                                1) Айналдыру дәрежесiн ескергендегi NaCl-ң шығыны:
-                            </p>
-                            <p>
-                                Х<sub>3</sub> = <span class="x3">1791.18</span> кг/сағ NaCl
-                            </p>
-                            <p>
-                                2) NaCl-ң реакцияға түспеген мөлшерi:
-                            </p>
-                            <p>
-                                Х<sub>4</sub> = <span class="x4">143.29</span> кг/сағ
-                            </p>
-                            <p>
-                                3) <span class="naclperc1">95</span>% NaCl бар ас тұзының шығыны
-                            </p>
-                            <p>
-                                Х<sub>5</sub> = <span class="x5">1885.45</span> кг/сағ
-                            </p>
-                            <p>
-                                4) Ас тұзындағы қоспалардың мөлшерi:
-                            </p>
-                            <p>
-                                Х<sub>6</sub> = <span class="x6">94.27</span> кг/сағ
-                            </p>
-                            <p>
-                                5) Н<sub>2</sub>SO<sub>4</sub>-ң өндiрiстiк шығыны:
-                            </p>
-                            <p>
-                                Х<sub>7</sub> = <span class="x7">13.8</span> кг/сағ
-                            </p>
-                            <p>
-                                6) Н<sub>2</sub>SO<sub>4</sub>–ң жалпы шығыны:
-                            </p>
-                            <p>
-                                Х<sub>8</sub> = <span class="x8">1394.08</span> кг/сағ
-                            </p>
-                            <p>
-                                7) Купорос майының шығыны:
-                            </p>
-                            <p>
-                                Х<sub>9</sub> = <span class="x9">1507.11</span> кг/сағ
-                            </p>
-                            <p>
-                                8) Купорос майындағы судың мөлшерi:
-                            </p>
-                            <p>
-                                Х<sub>10</sub> = <span class="x10">113.03</span> кг/сағ
-                            </p>
-                        </div>
-                        <br>
-                        <div class="steps">
-                            <p>
-                                III. Реакция бойынша пайда болған хлорсутектiң мөлшерi.
-                            </p>
-                            <p>
-                                Х<sub>11</sub> = <span class="x11">1028.17</span> кг/сағ
+                                 КС=ХР2/[(1-Хр)(2-Хр)]=1.
                             </p>
                         </div>
                     </div>
