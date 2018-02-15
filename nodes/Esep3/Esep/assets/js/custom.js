@@ -8,20 +8,20 @@ $(document).ready(function() {
         //Variables
         correctArrays = new Array($('.user_input_field.active input[type="text"]').length);
         correctArrays.fill(0);
-        
+
         event.preventDefault();
 
         var isValid = true;
         $('.user_input_field.active input[type="text"]').each(function() {
             if (!$.isNumeric($(this).val())) {
                 isValid = false;
-                wrongInput($(this));                
+                wrongInput($(this));
             } else {
                 var input = $(this);
                 var inputId = input.attr("id");
                 var inputVal = input.val();
                 var values = { "userInput1": xch4, "userInput2": sh};
-                
+
 
                 $.each(values, function(key, value) {
                     if ((inputId == key) && (inputVal == value)) {
@@ -39,7 +39,7 @@ $(document).ready(function() {
                 });
                 correctCount ++;
             }
-            
+
         });
         console.log(correctArrays.toString());
 
@@ -56,7 +56,7 @@ $(document).ready(function() {
         nr = Math.round((Math.random() * 5 + 5) * 10) / 10;
 
         xch4 = Math.round((nao - na) / nao * 100);
-        
+
         g = Math.round((nao - na) * 2 *10) / 10;
 
         sh = Math.round((nr / g) * 100);
