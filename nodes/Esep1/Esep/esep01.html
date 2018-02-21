@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Esep 01</title>
+    <link rel="stylesheet" href="../../../css/tasks/materialize.min.css">
+    <link rel="stylesheet" href="../../../css/tasks/style.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="contentWrapper">
+                <div class="esepTitle">
+                    Химиялық өндірістің негізгі құрамаларының арасындағы байланыс
+                </div>
+                <div class="content">
+                    <div class="dragndropsection">
+
+                        <div class='col s12'>
+                            <div class="row">
+                                <div class="col s3 offset-s8 droppable-item item-one">
+                                    Негізгі өнім
+                                </div>
+                            </div>
+                            <div class="row">
+                                <p>
+                                    Шикізат
+                                </p>
+                                <div id="ans01" class="droppable col s2 offset-s1 droppable-item item-two">
+                                </div>
+                                <div id="ans02" class="droppable col s2 offset-s1 droppable-item item-two">
+                                </div>
+                                <div id="ans03" class="droppable col s2 offset-s1 droppable-item item-two">
+                                    <p id="firstline">
+
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="droppable col s3 offset-s4 droppable-item item-three">
+                                    <p class="tree">
+                                        Реакцияга туспеген заттар
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row row-three">
+                                <div id="ans04" class="droppable col s2  droppable-item ">
+                                </div>
+                                <div id="ans05" class="droppable col s2 offset-s1 droppable-item item-two">
+                                    <p id="secondline">
+
+                                    </p>
+                                </div>
+                                <div id="ans06" class="droppable col s2 offset-s1 droppable-item item-two">
+                                    <p id="thirdline">
+
+                                    </p>
+                                </div>
+                                <div id="ans07" class="droppable col s2 offset-s1 droppable-item item-two">
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="col s12" id="ansList">
+                            <ul id='' class="col s6 table table-hover">
+                                <li id="01" class="draggable draggable-item-clear col s4">Шикізатты дайындау</li>
+                                <li id="02" class="draggable draggable-item-clear col s4">Химиялық айналдыру</li>
+                                <li id="03" class="draggable draggable-item-clear col s4">өнімді балу және тазарту</li>
+                                <li id="08" class="draggable draggable-item-clear col s4">Энергетикалык процесс</li>
+                            </ul>
+                            <ul class="col s6 table table-hover">
+                                <li id="04" class="draggable draggable-item-clear col s4">Энергетикалык комплекс</li>
+                                <li id="05" class="draggable draggable-item-clear col s4">Су дайындау</li>
+                                <li id="06" class="draggable draggable-item-clear col s4">Калдыктарды тазарту жане кайта колдану</li>
+                                <li id="07" class="draggable draggable-item-clear col s4">Жанама оним</li>
+                                <li id="09" class="draggable draggable-item-clear col s4">Жанама реакция</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <fieldset>
+                    <div id="AnsButtons">
+                        <button id="answer" class='btn btn-primary'>Ответить</button>
+                        <button id="correctAns" class='btn btn-success'>Правильный ответ</button>
+                    </div>
+                </fieldset>
+                <fieldset class="box" id="mark" hidden>Ваша оценка: <span id="markValue"></span>% <span id="markSend"></span></fieldset>
+
+            </div>
+
+        </div>
+    </div>
+
+    <script src="../../../js/tasks/jquery-3.3.1.min.js"></script>
+    <script src="../../../js/tasks/jquery-ui.js"></script>
+    <script src="../../../js/tasks/materialize.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+</body>
+
+</html>

@@ -1,146 +1,140 @@
-$(document).ready(function() {
-    var nao = 10,
-        nr = 12,
-        na = 2.5,
-        xch4 = 75,
-        sh = 80;
-    var correctCount = 0;
-    var correctArrays = [];
-    var sum = 0;
+    var mark = 0;
+    var optDraggable = {
+        containment: '#wrapper',
+        snap: true,
+        snapMode: "inner",
+        stack: "#ansList li"
+    };
+    var optDroppable = {
+        addClasses: false,
+        accept: '#ansList li',
+        hoverClass: 'hovered',
+        drop: handleAns,
+        tolerance: 'intersect',
+        out: function(event, ui) {
+            if (ui.draggable.hasClass('correct')) {
+                ui.draggable.removeClass('correct')
+            } else if (ui.draggable.hasClass('incorrect')) {
+                ui.draggable.removeClass('incorrect')
+            }
+        }
+    }
+    $(function() {
+        var parent = $('#ansList');
+        var child = parent.children();
+        while (child.length) {
+            parent.append(child.splice(Math.floor(Math.random() * child.length), 1)[0]);
+        }
+    });
+    $("#01").data("number", 1).draggable(optDraggable);
+    $("#02").data("number", 2).draggable(optDraggable);
+    $("#03").data("number", 3).draggable(optDraggable);
+    $("#04").data("number", 4).draggable(optDraggable);
+    $("#05").data("number", 5).draggable(optDraggable);
+    $("#06").data("number", 6).draggable(optDraggable);
+    $("#07").data("number", 7).draggable(optDraggable);
+    $("#08").data("number", 8).draggable(optDraggable);
+    $("#09").data("number", 9).draggable(optDraggable);
 
-    var allnonactiveCorrect = $('.user_input_field input[type="text"]').length;
-    var allactiveCorrect;
-
-    $("#userForms").submit(function(event) {
-
-        allnonactiveCorrect = $('.user_input_field input[type="text"]').length;
-        allactiveCorrect = $('.user_input_field.active input[type="text"]').length;
-
-
-        correctArrays = new Array(allactiveCorrect);
-
-
-        correctArrays.fill(0);
-
-        event.preventDefault();
-
-        var isValid = true;
-        $('.user_input_field.active input[type="text"]').each(function() {
-            if (!$.isNumeric($(this).val())) {
-                isValid = false;
-                wrongInput($(this));
-            } else {
-                var input = $(this);
-                var inputId = input.attr("id");
-                var inputVal = input.val();
-                var values = {
-                    "userInput1": xch4,
-                    "userInput2": sh
-                };
-
-
-                $.each(values, function(key, value) {
-                    if ((inputId == key) && (inputVal == value)) {
-                        correctInput(input);
-                        correctArrays[correctCount] = 1;
-                        sum = correctArrays.reduce((a, b) => a + b, 0);
-
-                        if (correctArrays.every(allCorrectCheck)) {
-                            console.log("all correct");
-                            $(input).parent().parent().next(".user_input_field").slideDown().addClass("active");
+    $("#ans01").data("number", 1).droppable(optDroppable);
+    $("#ans02").data("number", 2).droppable(optDroppable);
+    $("#ans03").data("number", 3).droppable(optDroppable);
+    $("#ans04").data("number", 4).droppable(optDroppable);
+    $("#ans05").data("number", 5).droppable(optDroppable);
+    $("#ans06").data("number", 6).droppable(optDroppable);
+    $("#ans07").data("number", 7).droppable(optDroppable);
 
 
-                            console.log("Sum of corrects = " + sum);
-
-                            if (allnonactiveCorrect == allactiveCorrect) {
-                                mark(sum, allnonactiveCorrect);
-                            }
-
-                        }
-
-                        return false;
-                    } else {
-                        wrongInput(input);
-                        correctArrays[correctCount] = 0;
-                    }
-                });
-                correctCount++;
+    function handleAns(event, ui) {
+        var slotNumber = $(this).data('number');
+        var cardNumber = ui.draggable.data('number');
+        if (slotNumber == cardNumber) {
+            ui.draggable.addClass('correct');
+        } else {
+            ui.draggable.addClass('incorrect');
+        }
+        ui.draggable.position({
+            my: "center",
+            at: "center",
+            of: $(this),
+            using: function(pos) {
+                $(this).animate(pos, "slow", "swing");
             }
         });
 
-        console.log(correctArrays.toString());
+    }
 
-        correctCount = 0;
+    function marks(marks) {
+        $("#mark").show();
+        mark = Math.round((mark / marks) * 100 * 100) / 100;
+        $("#markValue").html(mark);
+        $("#markSend").html("<a href='problem:" + mark + "'>Завершить задачу</a>");
+    }
 
-        if (!isValid) {
-            Materialize.toast('Неверный ввод данных', 4000);
+    function disableAns() {
+        $("#answer").prop("disabled", true);
+        $("#correctAns").prop("disabled", true);
+        $(".draggable").draggable("disable");
+        $(".droppable").droppable("disable");
+    }
+    var green = {
+        "border-color": "green",
+        "border-style": "outset",
+        "border-width": "1px"
+    };
+    var red = {
+        "border-color": "red",
+        "border-style": "outset",
+        "border-width": "1px"
+    }
+    $("#answer").click(function() {
+        if (!$(".draggable").hasClass("correct") && !$(".draggable").hasClass("incorrect")) {
+            alert("Вставьте варианты ответа");
+        } else {
+            $("#ansList li").each(function(index, element) {
+                if ($(this).is(".correct")) {
+                    mark++;
+                }
+            });
+            if ($(".draggable").hasClass("correct")) {
+                $(".correct").addClass("green");
+            }
+            if ($(".draggable").hasClass("incorrect")) {
+                $(".incorrect").addClass("red");
+            }
+
+            marks(7.0);
+            disableAns();
         }
     });
 
-    $("#show_solution").click(show_answers);
+    $("#correctAns").click(function() {
+        var posCenter = {
+            my: "center",
+            at: "center",
+            using: function(pos) {
+                $(this).animate(pos, "slow", "linear");
+            }
+        }
+        var id1 = { of: "#ans01"
+        };
+        var id2 = { of: "#ans02"
+        };
+        var id3 = { of: "#ans03"
+        };
+        var id4 = { of: "#ans04"
+        };
+        var id5 = { of: "#ans05"
+        };
+        var id6 = { of: "#ans06"
+        };
+        var id7 = { of: "#ans07"
+        };
 
-    $("#generateRandom").click(generateRandom);
-
-
-
-    function generateRandom() {
-        nao = Math.round((Math.random() * 5 + 5) * 10) / 10;
-        na = Math.round((Math.random() * 5 + 0) * 10) / 10;
-        nr = Math.round((Math.random() * 5 + 5) * 10) / 10;
-
-        xch4 = Math.round((nao - na) / nao * 100);
-
-        g = Math.round((nao - na) * 2 * 10) / 10;
-
-        sh = Math.round((nr / g) * 100);
-
-        initalize();
-    }
-
-    function initalize() {
-        $(".nao").html(nao);
-        $(".na").html(na);
-        $(".nr").html(nr);
-        $(".xch4").html(xch4);
-        $(".g").html(g);
-        $(".sh").html(sh);
-    }
-
-    function mark(sum, marks) {
-        $("#mark").show();
-        sum = Math.round((sum / marks) * 100 * 100) / 100;
-        $("#markValue").html(sum);
-        $("#markSend").html('<a href="problem' + sum + '">Завершить задачу</a>');
-    }
-
-    function wrongInput(argument) {
-        $(argument).removeClass("correct");
-        $(argument).addClass("wrong");
-        setTimeout(function() {
-            $(argument).removeClass("wrong");
-        }, 2000);
-    }
-
-    function correctInput(argument) {
-        $(argument).removeClass("wrong");
-        $(argument).addClass("correct");
-
-    }
-
-    function show_answers(argument) {
-        $("#generateRandom").prop("disabled", true);
-        $("button:submit").prop("disabled", true);
-
-        $(".answers").slideDown();
-        $('html, body').animate({
-            scrollTop: $("#solution").offset().top
-        }, 1000);
-
-        mark(sum, allnonactiveCorrect);
-    }
-
-    function allCorrectCheck(argument) {
-        return argument == 1;
-    }
-
-});
+        for (var i = 1; i <= 7; i++) {
+            $.extend(eval("id" + i), posCenter);
+            $("#0" + i).position(eval("id" + i)).addClass("green");
+        }
+        marks(7.0);
+        disableAns();
+    });
