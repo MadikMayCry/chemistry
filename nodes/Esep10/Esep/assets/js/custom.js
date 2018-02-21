@@ -84,7 +84,7 @@ $(document).ready(function() {
         h2so4perc1 = Math.round((Math.random() * 50 + 50) * 100) / 100;
         h2so4perc2 = Math.round((Math.random() * 10 + 1) * 100) / 100;
 
-            x1 = Math.round(117 * t1 * Math.pow(10, 3) / 142 * 100) / 100;
+        x1 = Math.round(117 * t1 * Math.pow(10, 3) / 142 * 100) / 100;
         x2 = Math.round(98 * t1 * Math.pow(10, 3) / 142 * 100) / 100;
 
         x3 = Math.round(x1 * 100 / naclperc2 * 100) / 100;
@@ -121,6 +121,14 @@ $(document).ready(function() {
 
         $(".x11").html(x11);
     }
+
+    function mark(sum, marks) {
+        $("#mark").show();
+        sum = Math.round((sum / marks) * 100 * 100) / 100;
+        $("#markValue").html(sum);
+        $("#markSend").html('<a href="problem' + sum + '">Завершить задачу</a>');
+    }
+
 
     function wrongInput(argument) {
         $(argument).removeClass("correct");
