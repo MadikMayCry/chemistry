@@ -114,7 +114,7 @@ body {
 }
 
 .drop-table {
-    margin: 0px 0px 0px 20px;
+    margin-left: -4px;
     list-style: none;
     line-height: 2em;
     font-family: Arial;
@@ -125,13 +125,17 @@ body {
 }
 
 .drop-table:before {
-    content: none!important;
+    /* content: none!important; */
 }
 
 .drop-table li {
     font-size: 16px;
     position: relative;
     left: -25px;
+}
+
+.firstUl::before {
+    content: none;
 }
 
 .drop-table li:before {
@@ -150,4 +154,8 @@ body {
 
 .drop-table li:last-child:after {
     display: none;
+}
+
+.tree ul:first-child {
+    content: none;
 }
