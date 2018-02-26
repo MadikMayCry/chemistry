@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Esep 15</title>
+    <link rel="stylesheet" href="../../../css/tasks/materialize.min.css">
+    <link rel="stylesheet" href="../../../css/tasks/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="contentWrapper">
+                <div class="esepTitle">
+                    Катализдік және катализсіз реакциялардың энергетикалық диаграммасы.
+                </div>
+                <div class="content">
+                    <div class="dragndropsection">
+                        <div class="row">
+                            <div class="col s6">
+                                <img src="assets/img/graph.png" alt="">
+                            </div>
+                            <div class="col s6">
+                                <p class="ta">
+                                    Сүретке қарай жауаптарды біріктіріңіз
+                                </p>
+                                <div class="row">
+                                    <div class="col s6">
+                                        <div id="ans01" class="col s12 droppable-item ">
+                                            I
+                                        </div>
+                                        <div id="ans02" class="col s12 droppable-item">
+                                            II
+                                        </div>
+                                        <div id="ans03" class="col s12 droppable-item">
+                                            1
+                                        </div>
+                                        <div id="ans04" class="col s12 droppable-item">
+                                            2
+                                        </div>
+                                    </div>
+                                    <ul class="col s6" id="ansList">
+                                        <li id="01" class="col s12 draggable">
+                                            Бастапқы реагенттер
+                                        </li>
+                                        <li id="02" class="col s12 draggable">
+                                            Реакция өнімдері
+                                        </li>
+                                        <li id="03" class="col s12 draggable">
+                                            Катализсіз реакцияның механизмі
+                                        </li>
+                                        <li id="04" class="col s12 draggable">
+                                            Катализдік реакцияның механизмі
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <fieldset>
+                        <div id="AnsButtons">
+                            <button id="answer" class='btn btn-primary'>Ответить</button>
+                            <button id="correctAns" class='btn btn-success'>Правильный ответ</button>
+                        </div>
+                    </fieldset>
+                    <fieldset class="box" id="mark" hidden>Ваша оценка: <span id="markValue"></span>% <span id="markSend"></span></fieldset>
+
+                </div>
+
+            </div>
+        </div>
+
+        <script src="../../../js/tasks/jquery-3.3.1.min.js"></script>
+        <script src="../../../js/tasks/jquery-ui.js"></script>
+        <script src="../../../js/tasks/materialize.min.js"></script>
+        <script src="assets/js/custom.js"></script>
+</body>
+
+</html>

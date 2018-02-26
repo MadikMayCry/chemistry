@@ -3,6 +3,10 @@
     padding: 0;
 }
 
+.ta {
+    text-align: center;
+}
+
 body {
     background-color: #e3f2fd;
     background-image: url(../../images/back.jpg);
