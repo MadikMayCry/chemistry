@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Esep 04</title>
+    <link rel="stylesheet" href="../../../css/tasks/materialize.min.css">
+    <link rel="stylesheet" href="../../../css/tasks/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="contentWrapper">
+                <div class="esepTitle">
+                    Аммиак синтезінің функционалдық (принциптік) үлгісі
+                </div>
+                <div class="content">
+                    <div class="dragndropsection">
+
+
+                        <div class="col s12">
+                            <div class="col s12 first-row-outer row">
+                                <div class="col s1 firstline">
+                                    <p>
+                                        АСҚ
+                                    </p>
+                                </div>
+                                <div class="col s8">
+                                    <div class="headline">
+                                        Шикізатты дайындау
+                                    </div>
+                                    <div class="center-content ">
+                                        <div class="row">
+                                            <div class="col s3">
+                                                <div id="ans01" class="droppable-item">
+
+                                                </div>
+                                            </div>
+                                            <div class="col s3 offset-s1">
+                                                <div id="ans02" class="droppable-item">
+
+                                                </div>
+                                            </div>
+                                            <div class="col s3 offset-s1 ">
+                                                <div id="ans03" class="droppable-item center-last"></div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col s3 droppable-item second-item offset-s2">
+                                                АСҚ-ы сығу
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col s3">
+                                    <div id="ans04" class="third-item droppable-item">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col s12 second-row-outer row">
+                                <div class="col s3 firstline">
+                                    <p>
+                                        NH<sub>3</sub>(C) (өнім)
+                                    </p>
+                                </div>
+                                <div class="col s7">
+                                    <div class="center-content ">
+                                        <div class="row">
+                                            <div class="col offset-s2 s4">
+                                                <div id="ans05" class="droppable-item">
+                                                </div>
+                                            </div>
+                                            <div class="col s4 offset-s2">
+                                                <div id="ans06" class="droppable-item"></div>
+                                            </div>
+                                        </div>
+                                        <div class="headline">
+                                            Өнімді бөлү және тазарту
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col s1 firstline second">
+                                    <p>
+                                        Химиялық айналдыру
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col s12">
+                                <ul id="ansList" class="col s12 table table-hover">
+                                    <li id="01" class="draggable ">АСҚ-ы сығу</li>
+                                    <li id="02" class="draggable ">Салқындату</li>
+                                    <li id="03" class="draggable ">АСҚ-дан NH<sub>3</sub>-ті бөлү</li>
+                                    <li id="04" class="draggable ">Аммиак Синтезі</li>
+                                    <li id="05" class="draggable ">АСҚ-ы және NH<sub>3</sub> бөлу</li>
+                                    <li id="06" class="draggable ">Салқындату</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <fieldset>
+                        <div id="AnsButtons">
+                            <button id="answer" class='btn btn-primary'>Ответить</button>
+                            <button id="correctAns" class='btn btn-success'>Правильный ответ</button>
+                        </div>
+                    </fieldset>
+                    <fieldset class="box" id="mark" hidden>Ваша оценка: <span id="markValue"></span>% <span id="markSend"></span></fieldset>
+
+                </div>
+
+            </div>
+        </div>
+
+        <script src="../../../js/tasks/jquery-3.3.1.min.js"></script>
+        <script src="../../../js/tasks/jquery-ui.js"></script>
+        <script src="../../../js/tasks/materialize.min.js"></script>
+        <script src="assets/js/custom.js"></script>
+</body>
+
+</html>

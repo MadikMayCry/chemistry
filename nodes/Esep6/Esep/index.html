@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Esep 05</title>
+    <link rel="stylesheet" href="../../../css/tasks/materialize.min.css">
+    <link rel="stylesheet" href="../../../css/tasks/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="contentWrapper">
+                <div class="esepTitle">
+                    Химия-технологиялық жүйелердің моделдерін жіктеу
+                </div>
+                <div class="content">
+                    <div class="dragndropsection">
+                        <div class="row">
+                            <div class="col s6">
+                                <img src="assets/img/graph.png" alt="">
+                            </div>
+                            <div class="col s6">
+                                <p class="ta">
+                                    Сүретке қарай жауаптарды біріктіріңіз
+                                </p>
+                                <div class="row">
+                                    <div class="col s6">
+                                        <div id="ans01" class="col s12 droppable-item ">
+                                            1
+                                        </div>
+                                        <div id="ans02" class="col s12 droppable-item">
+                                            2
+                                        </div>
+                                        <div id="ans03" class="col s12 droppable-item">
+                                            3
+                                        </div>
+                                        <div id="ans04" class="col s12 droppable-item">
+                                            4
+                                        </div>
+                                        <div id="ans05" class="col s12 droppable-item">
+                                            5
+                                        </div>
+                                        <div id="ans06" class="col s12 droppable-item">
+                                            6
+                                        </div>
+                                        <div id="ans07" class="col s12 droppable-item">
+                                            7
+                                        </div>
+                                        <div id="ans08" class="col s12 droppable-item">
+                                            8
+                                        </div>
+                                    </div>
+                                    <ul class="col s6" id="ansList">
+                                        <li id="01" class="col s12 draggable">
+                                            Бункер
+                                        </li>
+                                        <li id="02" class="col s12 draggable">
+                                            Қайнау қабатты пеші
+                                        </li>
+                                        <li id="03" class="col s12 draggable">
+                                            Буқыздырғыш
+                                        </li>
+                                        <li id="04" class="col s12 draggable">
+                                            Бу қазаны
+                                        </li>
+                                        <li id="05" class="col s12 draggable">
+                                            Барабан-сепаратор
+                                        </li>
+                                        <li id="06" class="col s12 draggable">
+                                            Салқындатқыш элементтер
+                                        </li>
+                                        <li id="07" class="col s12 draggable">
+                                            Циркуляциялық айдағыш
+                                        </li>
+                                        <li id="08" class="col s12 draggable">
+                                            Салқындатқыш элементтер
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <fieldset>
+                        <div id="AnsButtons">
+                            <button id="answer" class='btn btn-primary'>Ответить</button>
+                            <button id="correctAns" class='btn btn-success'>Правильный ответ</button>
+                        </div>
+                    </fieldset>
+                    <fieldset class="box" id="mark" hidden>Ваша оценка: <span id="markValue"></span>% <span id="markSend"></span></fieldset>
+
+                </div>
+
+            </div>
+        </div>
+
+        <script src="../../../js/tasks/jquery-3.3.1.min.js"></script>
+        <script src="../../../js/tasks/jquery-ui.js"></script>
+        <script src="../../../js/tasks/materialize.min.js"></script>
+        <script src="assets/js/custom.js"></script>
+</body>
+
+</html>
