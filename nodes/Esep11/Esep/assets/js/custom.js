@@ -26,20 +26,21 @@ $(function() {
         parent.append(child.splice(Math.floor(Math.random() * child.length), 1)[0]);
     }
 });
-$("#01").data("number", 1).draggable(optDraggable);
-$("#02").data("number", 2).draggable(optDraggable);
-$("#03").data("number", 3).draggable(optDraggable);
-$("#04").data("number", 4).draggable(optDraggable);
-$("#05").data("number", 5).draggable(optDraggable);
-$("#06").data("number", 6).draggable(optDraggable);
+$("#01").data("number", 1 || 2 || 3 || 4 || 5).draggable(optDraggable);
+$("#02").data("number", 1 || 2 || 3 || 4 || 5).draggable(optDraggable);
+$("#03").data("number", 1 || 2 || 3 || 4 || 5).draggable(optDraggable);
+$("#04").data("number", 1 || 2 || 3 || 4 || 5).draggable(optDraggable);
+$("#05").data("number", 1 || 2 || 3 || 4 || 5).draggable(optDraggable);
+$("#06").data("number", 0).draggable(optDraggable);
+$("#07").data("number", 0).draggable(optDraggable);
+$("#08").data("number", 0).draggable(optDraggable);
+$("#09").data("number", 0).draggable(optDraggable);
 
-
-$("#ans01").data("number", 1).droppable(optDroppable);
-$("#ans02").data("number", 2).droppable(optDroppable);
-$("#ans03").data("number", 3).droppable(optDroppable);
-$("#ans04").data("number", 4).droppable(optDroppable);
-$("#ans05").data("number", 5).droppable(optDroppable);
-$("#ans06").data("number", 6).droppable(optDroppable);
+$("#ans01").data("number", 1 || 2 || 3 || 4 || 5).droppable(optDroppable);
+$("#ans02").data("number", 1 || 2 || 3 || 4 || 5).droppable(optDroppable);
+$("#ans03").data("number", 1 || 2 || 3 || 4 || 5).droppable(optDroppable);
+$("#ans04").data("number", 1 || 2 || 3 || 4 || 5).droppable(optDroppable);
+$("#ans05").data("number", 1 || 2 || 3 || 4 || 5).droppable(optDroppable);
 
 function handleAns(event, ui) {
     var slotNumber = $(this).data('number');
@@ -98,7 +99,7 @@ $("#answer").click(function() {
             $(".incorrect").addClass("red");
         }
 
-        marks(6.0);
+        marks(5.0);
         disableAns();
     }
 });
@@ -121,16 +122,15 @@ $("#correctAns").click(function() {
     };
     var id5 = { of: "#ans05"
     };
-    var id6 = { of: "#ans06"
-    };
 
 
 
-    for (var i = 1; i <= 6; i++) {
+
+    for (var i = 1; i <= 5; i++) {
         $.extend(eval("id" + i), posCenter);
         $("#0" + i).position(eval("id" + i)).addClass("green");
     }
 
-    marks(6.0);
+    marks(5.0);
     disableAns();
 });
