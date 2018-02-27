@@ -123,3 +123,7 @@ input.wrong {
 .draggable:first-letter {
     text-transform: uppercase;
 }
+
+fieldset{
+    border: none;
+}

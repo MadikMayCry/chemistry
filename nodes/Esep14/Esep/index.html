@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Esep 14</title>
+    <link rel="stylesheet" href="../../../css/tasks/materialize.min.css">
+    <link rel="stylesheet" href="../../../css/tasks/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="contentWrapper">
+                <div class="esepTitle">
+                    Әртекті процестерді үдету жолдары
+                </div>
+                <div class="content">
+                    <div class="dragndropsection">
+                        <div class="row ta">
+                            <div class="col s4">
+                                <p class="topicLine">
+                                    Сыртқыдиффузиялық аймақта жүретін процестер үшін процестің жалпы жылдамдығын жоғарылату үшін:
+                                </p>
+                                <div id="ans01" class="col s12 droppable-item ">
+                                </div>
+                                <div id="ans02" class="col s12 droppable-item ">
+                                </div>
+                                <div class="col s12 droppable-item ">
+                                    қарқынды араластыру
+                                </div>
+                                <div class="col s12 droppable-item ">
+                                    ағындардың қарама–қарсы және қиылысқан бағытын қолдану
+                                </div>
+                                <div id="ans03" class="col s12 droppable-item ">
+                                </div>
+                                <div id="ans04" class="col s12 droppable-item ">
+                                </div>
+                            </div>
+                            <div class="col s4">
+                                <p class="topicLine">
+                                    Ішкідиффузиялық аймақта жүретін процестер үшін:
+                                </p>
+                                <div id="ans05" class="col s12 droppable-item ">
+                                </div>
+                                <div class="col s12 droppable-item ">
+                                    қарқынды араластыру
+                                </div>
+                                <div id="ans06" class="col s12 droppable-item ">
+                                </div>
+                                <div id="ans07" class="col s12 droppable-item ">
+                                </div>
+                                <div class="col s12 droppable-item ">
+                                    ағындардың қарама–қарсы және қиылысқан бағытын қолдану керек
+                                </div>
+                            </div>
+                            <div class="col s4">
+                                <p class="topicLine">
+                                    Кинетикалық аймақта жүретін процестер үшін:
+                                </p>
+                                <div id="ans08" class="col s12 droppable-item ">
+                                </div>
+                                <div id="ans09" class="col s12 droppable-item ">
+                                </div>
+                                <div id="ans10" class="col s12 droppable-item ">
+                                </div>
+                                <div class="col s12 droppable-item ">
+                                    қарқынды араластыру
+                                </div>
+                                <div id="ans11" class="col s12 droppable-item ">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row" id="ansList">
+                            <div class="col s4">
+                                <div class="draggable answer-item" id="01">
+                                    Ағындардың жылдамдығын жоғарылату
+                                </div>
+                            </div>
+                            <div class="col s4">
+                                <div class="draggable answer-item" id="02">
+                                    Заттардың әрекеттесу бетін үлкейту
+                                </div>
+                            </div>
+                            <div class="col s4">
+                                <div class="draggable answer-item" id="03">
+                                    Қарқынды араластыру
+                                </div>
+                            </div>
+                            <div class="col s4">
+                                <div class="draggable answer-item" id="04">
+                                    Ағындардың қарама–қарсы және қиылысқан бағытын қолдану
+                                </div>
+                            </div>
+                            <div class="col s4">
+                                <div class="draggable answer-item" id="05">
+                                    Қысым қолдану
+                                </div>
+                            </div>
+
+                            <div class="col s4">
+                                <div class="draggable answer-item" id="06">
+                                    Әрекеттесуші заттардың концентрациясын жоғарылату керек
+                                </div>
+                            </div>
+                            <div class="col s4">
+                                <div class="draggable answer-item" id="07">
+                                    Түйіршіктердің өлшемдерін азайту
+                                </div>
+                            </div>
+                            <div class="col s4">
+                                <div class="draggable answer-item" id="08">
+                                    Қарқынды араластыру
+                                </div>
+                            </div>
+                            <div class="col s4">
+                                <div class="draggable answer-item" id="09">
+                                    Қатты заттарды ұнтақтау
+                                </div>
+                            </div>
+                            <div class="col s4">
+                                <div class="draggable answer-item" id="10">
+                                    Әрекеттесуші заттардың концентрациясын жоғарылату
+                                </div>
+                            </div>
+
+                            <div class="col s4">
+                                <div class="draggable answer-item" id="11">
+                                    Ағындардың қарама–қарсы және қиылысқан бағытын қолдану керек
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <fieldset>
+                        <div id="AnsButtons">
+                            <button id="answer" class='btn btn-primary'>Ответить</button>
+                            <button id="correctAns" class='btn btn-success'>Правильный ответ</button>
+                        </div>
+                    </fieldset>
+                    <fieldset class="box" id="mark" hidden>Ваша оценка: <span id="markValue"></span>% <span id="markSend"></span></fieldset>
+
+                </div>
+
+            </div>
+        </div>
+
+        <script src="../../../js/tasks/jquery-3.3.1.min.js"></script>
+        <script src="../../../js/tasks/jquery-ui.js"></script>
+        <script src="../../../js/tasks/materialize.min.js"></script>
+        <script src="assets/js/custom.js"></script>
+</body>
+
+</html>

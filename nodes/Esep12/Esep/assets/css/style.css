@@ -1,0 +1,18 @@
+.droppable-item{
+    width: 100%;
+    min-height: 50px !important;
+    z-index: 10;
+    border: 1px solid #000;
+    text-align: center;
+    line-height: 45px;
+}
+
+.droppable-item, .draggable{
+    margin-bottom: 10px;
+}
+
+
+.ta{
+    text-align: center;
+    margin-bottom: 15px;
+}
