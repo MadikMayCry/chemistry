@@ -27,28 +27,28 @@
         }
     });
     $("#01").data("number", 1).draggable(optDraggable);
-    $("#02").data("number", 2||4).draggable(optDraggable);
+    $("#02").data("number", 2 || 4).draggable(optDraggable);
     $("#03").data("number", 3).draggable(optDraggable);
-    $("#04").data("number", 2||4).draggable(optDraggable);
-    $("#05").data("number", 5).draggable(optDraggable);
-    $("#06").data("number", 6).draggable(optDraggable);
-    $("#07").data("number", 7).draggable(optDraggable);
-    $("#08").data("number", 8).draggable(optDraggable);
-    $("#09").data("number", 9).draggable(optDraggable);
-    $("#10").data("number", 10).draggable(optDraggable);
-    $("#11").data("number", 11).draggable(optDraggable);
+    $("#04").data("number", 2 || 4).draggable(optDraggable);
+    $("#05").data("number", 5 || 6 || 7 || 8).draggable(optDraggable);
+    $("#06").data("number", 5 || 6 || 7 || 8 || 9 || 10 || 11).draggable(optDraggable);
+    $("#07").data("number", 5 || 6 || 7 || 8).draggable(optDraggable);
+    $("#08").data("number", 5 || 6 || 7 || 8).draggable(optDraggable);
+    $("#09").data("number", 6 || 9 || 10 || 11).draggable(optDraggable);
+    $("#10").data("number", 5 || 6 || 7 || 8 || 9 || 10 || 11).draggable(optDraggable);
+    $("#11").data("number", 6 || 9 || 10 || 11).draggable(optDraggable);
 
     $("#ans01").data("number", 1).droppable(optDroppable);
-    $("#ans02").data("number", 2||4).droppable(optDroppable);
+    $("#ans02").data("number", 2 || 4).droppable(optDroppable);
     $("#ans03").data("number", 3).droppable(optDroppable);
-    $("#ans04").data("number", 2||4).droppable(optDroppable);
-    $("#ans05").data("number", 5).droppable(optDroppable);
-    $("#ans06").data("number", 6).droppable(optDroppable);
-    $("#ans07").data("number", 7).droppable(optDroppable);
-    $("#ans08").data("number", 8).droppable(optDroppable);
-    $("#ans09").data("number", 9).droppable(optDroppable);
-    $("#ans10").data("number", 10).droppable(optDroppable);
-    $("#ans11").data("number", 11).droppable(optDroppable);
+    $("#ans04").data("number", 2 || 4).droppable(optDroppable);
+    $("#ans05").data("number", 5 || 6 || 7 || 8).droppable(optDroppable);
+    $("#ans06").data("number", 5 || 6 || 7 || 8 || 9 || 10 || 11).droppable(optDroppable);
+    $("#ans07").data("number", 5 || 6 || 7 || 8).droppable(optDroppable);
+    $("#ans08").data("number", 5 || 6 || 7 || 8).droppable(optDroppable);
+    $("#ans09").data("number", 6 || 9 || 10 || 11).droppable(optDroppable);
+    $("#ans10").data("number", 5 || 6 || 7 || 8 || 9 || 10 || 11).droppable(optDroppable);
+    $("#ans11").data("number", 6 || 9 || 10 || 11).droppable(optDroppable);
 
 
     function handleAns(event, ui) {

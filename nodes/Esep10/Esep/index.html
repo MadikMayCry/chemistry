@@ -6,6 +6,8 @@
     <title>Esep 10</title>
     <link rel="stylesheet" href="../../../css/tasks/materialize.min.css">
     <link rel="stylesheet" href="../../../css/tasks/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
 </head>
 
 <body>
@@ -13,71 +15,87 @@
         <div class="row">
             <div class="contentWrapper">
                 <div class="esepTitle">
-                    Бастапқы қоспада <span class="m1">1</span> моль СО-ға <span class="m2">2</span> моль Н<sub>2</sub>О болғандағы газдың тепе-теңдік құрамын анықтаңыздар.
+                    Қысымды шектен тыс жоғарылату мынадай жағдайларға алып келеді:
                 </div>
                 <div class="content">
-                    <div class="blockTitle">Берілгені:</div>
-                    <p>
-                        СО + Н<sub>2</sub>О СО<sub>2</sub>+Н<sub>2</sub> реакциясы бойынша көміртек оксидінің (II) су буымен конверсиясы кезінде тепе-теңдік тұрақтысының мағынасы КС = (CO<sub>2</sub>)/([C0][H<sub>2</sub>O]) = <span class="kc">1</span>-ге
-                        тең.
-                    </p>
-                    <p>
-                        Бастапқы қоспада <span class="m1">1</span> моль СО-ға <span class="m2">2</span> моль Н<sub>2</sub>О болғандағы газдың тепе-теңдік құрамын анықтаңыздар.
-                    </p>
-                    <p>Есептеулердi химиялық реакцияның стехиометриялық теңдеуi бойынша жүргiземiз:</p>
-                    <img src="assets/img/formula1.png" alt="">
-
-                    <p class="primechanie">*Ответ округляется до сотых (Өрнек: 2.94)</p>
-                    <form action="" class="userForms col s6" id="userForms">
-                        <div class="input-field active user_input_field">
-                            <div class="input-field">
-                                <input id="userInput1" name="userInput1" type="text" class="validate">
-                                <label for="userInput1">NaCl-ң реакция шығыны: (кг/сағ NaCl)</label>
+                    <div class="dragndropsection">
+                        <div class="row">
+                            <div class="col s6">
+                                <img src="assets/img/graph.png" alt="">
+                                <p>
+                                    Айналдыру дәрежесінің (Хт) температураға тәуелділігі
+                                </p>
                             </div>
-                            <div class="input-field">
-                                <input id="userInput2" name="userInput2" type="text" class="validate">
-                                <label for="userInput2">Н<sub>2</sub>SO<sub>4</sub>-ң реакция шығыны: (кг/сағ Н<sub>2</sub>SO<sub>4</sub>)</label>
+                            <div class="col s6">
+                                <p class="ta">
+                                    Сүретке қарай жауаптарды біріктіріңіз
+                                </p>
+                                <div class="row">
+                                    <div class="col s6">
+                                        <div id="ans01" class="col s12 droppable-item ">
+                                            1
+                                        </div>
+                                        <div id="ans02" class="col s12 droppable-item">
+                                            2
+                                        </div>
+                                        <div id="ans03" class="col s12 droppable-item">
+                                            3
+                                        </div>
+                                        <div id="ans04" class="col s12 droppable-item">
+                                            4
+                                        </div>
+                                        <div id="ans05" class="col s12 droppable-item">
+                                            5
+                                        </div>
+                                    </div>
+                                    <ul class="col s6" id="ansList">
+                                        <li id="01" class="col s12 draggable">
+                                            Технологиялық үлгінің өзіндік құны жоғарылайды
+                                        </li>
+                                        <li id="02" class="col s12 draggable">
+                                            Технологиялық үлгі күрделі болады
+                                        </li>
+                                        <li id="03" class="col s12 draggable">
+                                            Қондырғылардың, аппараттардың және т.б. жұмысын басқару қиындалады
+                                        </li>
+                                        <li id="04" class="col s12 draggable">
+                                            Аппараттарды, қондырғыларды және т.б. жасау үшін арнайы материалдар қажет
+                                        </li>
+                                        <li id="05" class="col s12 draggable">
+                                            Энергия шығыны жоғарылайды
+                                        </li>
+                                        <li id="06" class="col s12 draggable">
+                                            Араластыру дәрежесін жоғарылату
+                                        </li>
+                                        <li id="07" class="col s12 draggable">
+                                            Температураны жоғарылату
+                                        </li>
+                                        <li id="08" class="col s12 draggable">
+                                            Көлемінің үлкейуіне алып келеді
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
 
-
-                        <div class="input-field actionButtons clearB">
-                            <button class="waves-effect deep-orange darken-1 btn" type="button" id="generateRandom">Генерировать</button>
-                            <button class="waves-effect waves-light btn right green darken-1" type="submit">Тексеру</button>
-                        </div>
-                        <div class="input-field actionButtons clearB">
-                            <button class="waves-effect waves-light btn yellow darken-2 left" type="button" id="show_solution">Шығарылуы</button>
-                        </div>
-                    </form>
-                </div>
-                <fieldset class="box" id="mark" hidden>Ваша оценка: <span id="markValue"></span>% <span id="markSend"></span></fieldset>
-                <div class="answers clearB" id="solution">
-                    <div class="content">
-                        <div class="blockTitle">
-                            Шығарылуы:
-                        </div>
-                        <div class="steps">
-                            <p>
-                                Конверторленген газдағы СО<sub>2</sub>-ні тепе-теңдік айналдыру дәрежесін Х<sub>T</sub>-арқылы белгілейміз.
-                            </p>
-                            <p>
-                                Тепе-теңдік жағдайдағы компоненттердің молдік үлестері:
-                            </p>
-                            <p>
-                                СО - <span class="m1">1</span> - Х<sub>T</sub>; Н<sub>2</sub>О - <span class="m2">2</span> - Х<sub>T</sub>; СО<sub>2</sub> - Х<sub>T</sub>; Н<sub>2</sub> - Х<sub>T</sub>. Осыларды тепе-теңдік тұрақтысының теңдеуіне қоямыз, яғни
-                            </p>
-                            <p>
-                                 КС=ХР2/[(1-Хр)(2-Хр)]=1.
-                            </p>
-                        </div>
                     </div>
+                    <fieldset>
+                        <div id="AnsButtons">
+                            <button id="answer" class='btn btn-primary'>Ответить</button>
+                            <button id="correctAns" class='btn btn-success'>Правильный ответ</button>
+                        </div>
+                    </fieldset>
+                    <fieldset class="box" id="mark" hidden>Ваша оценка: <span id="markValue"></span>% <span id="markSend"></span></fieldset>
+
                 </div>
+
             </div>
         </div>
-    </div>
-    <script src="../../../js/tasks/jquery-3.3.1.min.js"></script>
-    <script src="../../../js/tasks/materialize.min.js"></script>
-    <script src="assets/js/custom.js"></script>
+
+        <script src="../../../js/tasks/jquery-3.3.1.min.js"></script>
+        <script src="../../../js/tasks/jquery-ui.js"></script>
+        <script src="../../../js/tasks/materialize.min.js"></script>
+        <script src="assets/js/custom.js"></script>
 </body>
 
 </html>

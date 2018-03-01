@@ -133,6 +133,12 @@ $(document).ready(function() {
     }
 
     function initalize() {
+        $(".naclperc1").html(naclperc1);
+        $(".naclperc2").html(naclperc2);
+
+        $(".h2so4perc1").html(h2so4perc1);
+        $(".h2so4perc2").html(h2so4perc2);
+
         $(".x1").html(x1);
         $(".x2").html(x2);
 

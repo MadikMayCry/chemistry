@@ -1,0 +1,66 @@
+.draggable {
+    float: left;
+    margin-bottom: 10px;
+}
+
+.droppable-item, .draggable {
+    padding: 5px 15px;
+}
+
+.droppable-item {
+    border: 1px solid #000;
+    text-align: center;
+    padding: 15px 15px !important;
+    position: relative;
+    height: 65px;
+}
+
+.droppable-item, .draggable {
+    min-height: auto !important;
+    height: 100px !important;
+}
+
+.droppable-item::before, .droppable-item::after {
+    content: " ";
+    position: absolute;
+}
+
+.first-row-outer .droppable-item::before {
+    top: calc(100% + 10px);
+    left: 50%;
+    width: 2px;
+    height: 65px;
+    margin-left: -1px;
+    background-color: #000;
+}
+
+.first-row-outer .s4:first-child .droppable-item::before {
+    left: 75%;
+    height: 95px;
+    top: calc(100% - 10px);
+    transform: rotate(-55deg);
+}
+
+.first-row-outer .s4:last-child .droppable-item::before {
+    left: 25%;
+    height: 95px;
+    top: calc(100% - 10px);
+    transform: rotate(55deg);
+}
+
+.second-row-outer {
+    margin-top: 50px;
+}
+
+.second-row-outer .droppable-item::before {
+    left: 50%;
+    width: 2px;
+    height: 65px;
+    margin-left: -1px;
+    top: calc(100% + 10px);
+    background-color: #000;
+}
+
+.third-row-outer{
+    margin-top: 65px;
+}

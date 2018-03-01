@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Esep 07</title>
+    <link rel="stylesheet" href="../../../css/tasks/materialize.min.css">
+    <link rel="stylesheet" href="../../../css/tasks/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="contentWrapper">
+                <div class="esepTitle">
+                    Типтік технологиялық операторларды жіктеу.
+                </div>
+                <div class="content">
+                    <div class="dragndropsection">
+                        <div class="row">
+                            <div class="col s2 offset-s5 droppable-item parent">
+                                Типтік ТО
+                            </div>
+                        </div>
+                        <div class="row second-row">
+                            <div class="col s2 offset-s2 droppable-item">
+                                Негізгі ТО
+                            </div>
+                            <div class="col s2 offset-s4 droppable-item">
+                                Қосымша ТО
+                            </div>
+                        </div>
+                        <div class="row third-row">
+                            <div class="col s6 first-col">
+                                <div class="col s3">
+                                    <div id="ans01" class="droppable-item"></div>
+                                </div>
+                                <div class="col s3">
+                                    <div id="ans02" class="droppable-item"></div>
+                                </div>
+                                <div class="col s3">
+                                    <div id="ans03" class="droppable-item"></div>
+                                </div>
+                                <div class="col s3">
+                                    <div id="ans04" class="droppable-item"></div>
+                                </div>
+                            </div>
+
+                            <div class="col s6 second-col">
+                                <div class="col s3 offset-s2">
+                                    <div id="ans05" class="droppable-item"></div>
+                                </div>
+                                <div class="col s3">
+                                    <div id="ans06" class="droppable-item"></div>
+                                </div>
+                                <div class="col s3">
+                                    <div id="ans07" class="droppable-item"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row bottom-content">
+
+                            <div class="col s6">
+                                <div class="col s3">
+                                    <div class="droppable-item">
+                                        <img src="assets/img/1.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="col s3">
+                                    <div class="droppable-item">
+                                        <img src="assets/img/2.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="col s3">
+                                    <div class="droppable-item">
+                                        <img src="assets/img/3.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="col s3">
+                                    <div class="droppable-item">
+                                        <img src="assets/img/4.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col s6">
+                                <div class="col s3 offset-s2">
+                                    <div class="droppable-item">
+                                        <img src="assets/img/5.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="col s3">
+                                    <div class="droppable-item">
+                                        <img src="assets/img/6.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="col s3">
+                                    <div class="droppable-item">
+                                        <img src="assets/img/7.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="ta">
+                                Типтік ТО-ны суреттеу
+                            </p>
+                        </div>
+                        <div id="ansList" class="row">
+                            <div class="col s6">
+                                <ul class="row table table-hover">
+                                    <li id="01" class="draggable col s3">
+                                        Химиялық айналдыру
+                                    </li>
+                                    <li id="02" class="draggable col s3">
+                                        Күйаралық салмақалмасу
+                                    </li>
+                                    <li id="03" class="draggable col s3">
+                                        Араластыру
+                                    </li>
+                                    <li id="04" class="draggable col s3">
+                                        Бөлу
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col s6">
+                                <ul class="row table table-hover">
+                                    <li id="05" class="draggable col s3">
+                                        Жылыту (салқындату)
+                                    </li>
+                                    <li id="06" class="draggable col s3">
+                                        Сығу (созу)
+                                    </li>
+                                    <li id="07" class="draggable col s3">
+                                        Саттардың агрегаттық күйін өзгерту
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <fieldset>
+                        <div id="AnsButtons">
+                            <button id="answer" class='btn btn-primary'>Ответить</button>
+                            <button id="correctAns" class='btn btn-success'>Правильный ответ</button>
+                        </div>
+                    </fieldset>
+                    <fieldset class="box" id="mark" hidden>Ваша оценка: <span id="markValue"></span>% <span id="markSend"></span></fieldset>
+
+                </div>
+
+            </div>
+        </div>
+
+        <script src="../../../js/tasks/jquery-3.3.1.min.js"></script>
+        <script src="../../../js/tasks/jquery-ui.js"></script>
+        <script src="../../../js/tasks/materialize.min.js"></script>
+        <script src="assets/js/custom.js"></script>
+</body>
+
+</html>
