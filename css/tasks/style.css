@@ -109,10 +109,11 @@ input.wrong {
 
 .draggable {
     width: 100%;
-    min-height: 50px !important;
-    background-color: #f0f0f0;
     z-index: 10;
     text-align: center;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    min-height: 50px !important;
 }
 
 .draggable-item-clear {

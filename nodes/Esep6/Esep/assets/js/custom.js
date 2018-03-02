@@ -3,11 +3,11 @@
         containment: '#wrapper',
         snap: true,
         snapMode: "inner",
-        stack: "#ansList li"
+        stack: "#ansList .answer-item"
     };
     var optDroppable = {
         addClasses: false,
-        accept: '#ansList li',
+        accept: '#ansList .answer-item',
         hoverClass: 'hovered',
         drop: handleAns,
         tolerance: 'intersect',
@@ -30,17 +30,13 @@
     $("#02").data("number", 2).draggable(optDraggable);
     $("#03").data("number", 3).draggable(optDraggable);
     $("#04").data("number", 4).draggable(optDraggable);
-    $("#05").data("number", 5).draggable(optDraggable);
-    $("#06").data("number", 6).draggable(optDraggable);
-    $("#07").data("number", 7).draggable(optDraggable);
+
 
     $("#ans01").data("number", 1).droppable(optDroppable);
     $("#ans02").data("number", 2).droppable(optDroppable);
     $("#ans03").data("number", 3).droppable(optDroppable);
     $("#ans04").data("number", 4).droppable(optDroppable);
-    $("#ans05").data("number", 5).droppable(optDroppable);
-    $("#ans06").data("number", 6).droppable(optDroppable);
-    $("#ans07").data("number", 7).droppable(optDroppable);
+
 
 
     function handleAns(event, ui) {
@@ -89,7 +85,7 @@
         if (!$(".draggable").hasClass("correct") && !$(".draggable").hasClass("incorrect")) {
             alert("Вставьте варианты ответа");
         } else {
-            $("#ansList li").each(function(index, element) {
+            $("#ansList .answer-item").each(function(index, element) {
                 if ($(this).is(".correct")) {
                     mark++;
                 }
@@ -101,7 +97,7 @@
                 $(".incorrect").addClass("red");
             }
 
-            marks(7);
+            marks(4);
             disableAns();
         }
     });
@@ -122,19 +118,14 @@
         };
         var id4 = { of: "#ans04"
         };
-        var id5 = { of: "#ans05"
-        };
-        var id6 = { of: "#ans06"
-        };
-        var id7 = { of: "#ans07"
-        };
 
 
-        for (var i = 1; i <= 7; i++) {
+
+        for (var i = 1; i <= 4; i++) {
             $.extend(eval("id" + i), posCenter);
             $("#0" + i).position(eval("id" + i)).addClass("green");
         }
 
-        marks(7.0);
+        marks(4.0);
         disableAns();
     });

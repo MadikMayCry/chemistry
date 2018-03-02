@@ -101,7 +101,7 @@
                 $(".incorrect").addClass("red");
             }
 
-            marks(8);
+            marks(5.0);
             disableAns();
         }
     });
@@ -124,19 +124,13 @@
         };
         var id5 = { of: "#ans05"
         };
-        var id6 = { of: "#ans06"
-        };
-        var id7 = { of: "#ans07"
-        };
-        var id8 = { of: "#ans08"
-        };
 
 
-        for (var i = 1; i <= 8; i++) {
+        for (var i = 1; i <= 5; i++) {
             $.extend(eval("id" + i), posCenter);
             $("#0" + i).position(eval("id" + i)).addClass("green");
         }
 
-        marks(8.0);
+        marks(5.0);
         disableAns();
     });
